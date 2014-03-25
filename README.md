@@ -1,7 +1,7 @@
 MSAN 622 Data Visualization
 ==============================
 
-| **Name**  | [YOUR NAME] |
+| **Name**  | [Prateek Singhal] |
 |----------:|:------------|
 | **Email** | [USERNAME]@dons.usfca.edu |
 

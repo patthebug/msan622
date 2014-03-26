@@ -1,13 +1,23 @@
 Homework 1: Basic Charts
 ==============================
 
-| **Name**  | [YOUR NAME]  |
+| **Name**  | Prateek Singhal  |
 |----------:|:-------------|
-| **Email** | [USERNAME]@dons.usfca.edu |
+| **Email** | psinghal@dons.usfca.edu |
 
 ## Instructions ##
 
-[INSTRUCTIONS: Include instructions on how to run your code. See [`homework0`](../homework0) for an example.]
+The following packages must be installed prior to running this code:
+- `ggplot2`
+- `reshape2`
+- `scales`
+
+To run this code, please enter the following commands in R:
+
+```
+library(devtools)
+source_url("https://github.com/patthebug/msan622/blob/master/homework1/HW-1.R")
+```
 
 ## Discussion ##
 

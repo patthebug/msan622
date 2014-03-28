@@ -24,12 +24,18 @@ movies$genre<-genre
 # transform the Eu dataset to time series
 eu <- transform(data.frame(EuStockMarkets), time = time(EuStockMarkets))
 
+million_formatter<-function(x){
+  return(sprintf("%dM",round(x/1000000)))
+}
+
 # Plot 1 - Scatterplot (changed the size and color of the points)
 # changed the size of the font on the axes and in the title
 p<-ggplot(movies,aes(x=budget,y=rating,color=genre)) + geom_point(size=2, stat='identity') + 
   xlab('Budget of the movie') + ylab('Rating of the movie') + ggtitle('Movie Budget v/s Movie Rating') +
   labs(colour="Genre") + theme(axis.text=element_text(size=14,face="bold"),
-                               plot.title = element_text(size = 25, face = "bold", colour = "black", vjust = 1)) 
+                               plot.title = element_text(size = 25, face = "bold", colour = "black", vjust = 1)) +
+  scale_x_continuous(label=million_formatter) + 
+  theme(axis.ticks.x=element_blank()) + theme(axis.ticks.y=element_blank())
 p
 # save the file
 ggsave(filename='hw1-scatter.png', plot=p, scale=1, height=6.5, width=13, units='in', dpi=300)
@@ -41,13 +47,19 @@ tempdf<-as.data.frame(table(movies$genre))
 tempdf$percentage<-tempdf$Freq/sum(tempdf$Freq)
 names(tempdf)<-c('Genre','Count','Percentage')
 
+thousand_formatter<-function(x){
+  return(sprintf("%dk",round(x/1000)))
+}
+
 # plot the bar chart with number of movies in each genre on top of each bar, removed the legend,
 # changed the size of the text on the axes and on the title
 p<-ggplot(data=tempdf,aes(x=Genre,y=Count,fill=Genre)) + geom_bar(stat='identity') + 
   geom_text(data=tempdf,aes(label=Count),vjust=0) +
   xlab('Genre of the Movie') + ylab('Count') + ggtitle('# of Movies in each genre') + guides(fill=FALSE) +
   theme(axis.text=element_text(size=14,face="bold"),
-        plot.title = element_text(size = 25, face = "bold", colour = "black", vjust = 1)) 
+        plot.title = element_text(size = 25, face = "bold", colour = "black", vjust = 1)) +
+  theme(axis.ticks.x=element_blank()) + theme(axis.ticks.y=element_blank()) +
+  scale_y_continuous(label=thousand_formatter)
 p
 
 # save the file
@@ -60,7 +72,8 @@ p <- ggplot(movies, aes(x=budget, y=rating, group = factor(genre),color=factor(g
   xlab('Budget') + ylab('Rating') + facet_wrap(~genre,ncol=3) + 
   theme(legend.position="none",text = element_text(size=13),
         plot.title = element_text(size = 25, face = "bold", colour = "black", vjust = 1)) +
-  ggtitle('Movie genre - Rating v/s Budget')
+  ggtitle('Movie genre - Rating v/s Budget') + scale_x_continuous(label=million_formatter) + 
+  theme(axis.ticks.x=element_blank()) + theme(axis.ticks.y=element_blank())
 p
 
 # save the file
@@ -72,12 +85,14 @@ ggsave(filename='hw1-multiples.png', plot=p, scale=1, height=6.5, width=13, unit
 tempdf<-as.data.frame(melt(eu[,1:4]))
 tempdf$time<-rep(eu$time,times=4)
 names(tempdf)<-c('Market','Value','Time')
+
 # increased the font size on the axes and on the title
 p <- ggplot(tempdf, aes(x=Time, y=Value, group = factor(Market),color=factor(Market))) + geom_line() +
   xlab('Year') + ylab('Value') + 
   ggtitle("Changes in Market's value over time") + labs(colour="Market") + 
   theme(axis.text=element_text(size=14,face="bold"),
-        plot.title = element_text(size = 25, face = "bold", colour = "black", vjust = 1)) 
+        plot.title = element_text(size = 25, face = "bold", colour = "black", vjust = 1)) + 
+  theme(axis.ticks.x=element_blank()) + theme(axis.ticks.y=element_blank())
 p
 
 # save the file

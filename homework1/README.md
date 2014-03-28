@@ -1,4 +1,4 @@
-Homework 1: Basic Charts
+Homework 1: Basic Charts 
 ==============================
 
 | **Name**  | Prateek Singhal  |

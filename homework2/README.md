@@ -19,7 +19,7 @@ library(shiny)
 library(ggplot2)
 library(scales)
 shiny::runGitHub('msan622', 'patthebug', 'homework2')
-source_url("https://github.com/patthebug/msan622/blob/master/homework1/HW-1.R")
+source_url("https://github.com/patthebug/msan622/tree/master/homework2")
 ```
 
 This will start the `shiny` app. See below for details on how to interact with the visualization.

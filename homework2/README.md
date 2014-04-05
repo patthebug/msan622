@@ -18,7 +18,7 @@ To run this code, please enter the following commands in R:
 library(shiny)
 library(ggplot2)
 library(scales)
-shiny::runGitHub('msan622', 'patthebug', 'homework2')
+shiny::runGitHub('msan622', 'patthebug', subdir='homework2')
 source_url("https://github.com/patthebug/msan622/tree/master/homework2")
 ```
 

@@ -41,7 +41,7 @@ The following Shiny app shows the technique 'filtering' applied to the 'State' d
 The filtering is consistent across all the plots, eg., if various regions are selected, they are reflected across all the 3 plots. There is also a functionality to change the alpha value to darken or lighten the dots or lines on the plots. User also has the option to choose different color schemes.
 Each of the three techniques will now be discussed in detail.
 
-Bubble Plot
+## Bubble Plot ##
 This technique was chosen because it does a good job of explaining the variables that I have chosen to visualize. I have chosen population, income, area of the state and region (South, West etc) to visualize in the bubble plot. Different colors on the plot represent the regions whereas the area of the dots (circles) represent the area of the state. The aforementioned variables were chosen to see the relationships between area of the state, region and income of the state wrt population of the state. The variable 'Region' has been used to determine the color of the dots present on the plot. 
 
 I have changed a few things to customize the plot and make it look more pleasing to the eyes.
@@ -59,12 +59,12 @@ Looking at the bubble plot, one can make the following observations:
 2. Northeastern states in general are much smaller than the rest of the states.
 3. The state having maximum area also has the highest income.
 
-Scatter Plot Matrix
+## Scatter Plot Matrix ##
 This technique was chosen as it does a pretty good job of explaining the correlation amongst various variables in question. 
 Variables chosen - Illetracy, murder, HS.Grad, Frost and Region. These variables are interesting in looking typically at education versus crime for various regions. 
 The data has been encoded using the variable 'Region'. Selecting the same variable region provides consistency across all the plots.
 
-Customizations performed:
+## Customizations performed: ##
 1. Removed the minor grid lines as they were distracting
 2. Removed the unrequired gray background from the legend
 3. Placed the legend on top of the plot to save some space
@@ -77,10 +77,10 @@ The following conclusions can be made by looking at the Scatter Plot Matrix:
 2. Western states seem to have the highest number of high school graduates and lower number of murders as compared to Southern states
 3. North eastern states seem to be colder compared to Western states
 
-Parallel Co-ordinates Plot:
+## Parallel Co-ordinates Plot: ##
 The columns chosen to be visualized in this technique are - Illetracy, Life expectancy, murder, income and region. These columns were chosen basically to look at education level and health status in various regions. The variable 'Region' is used to encode the data i.e. it represents the colors on the plot. Selecting the same variable region provides consistency across all the plots.
 
-Customization performed:
+## Customization performed: ##
 1. Removed the unrequired gray background from the legend
 2. Placed the legend at the bottom of the plot to save some space
 3. Modified the Y axis to display the minimum and maximum value for each variable in question

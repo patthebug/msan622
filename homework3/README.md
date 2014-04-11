@@ -38,7 +38,7 @@ The following Shiny app shows the technique 'filtering' applied to the 'State' d
 2. Scatter Plot Matrix
 3. Parallel Co-ordinates Plot
 
-The filtering is consistent across all the plots, eg., if various regions are selected, they are reflected across all the 3 plots. There is also a functionality to change the alpha value to darken or lighten the dots or lines on the plots. User also has the option to choose different color schemes.
+These plots are displayed in three different tabs which form a tabsetPanel. The filtering is consistent across all the plots, eg., if various regions are selected, they are reflected across all the 3 plots. There is also a functionality to change the alpha value to darken or lighten the dots or lines on the plots. User also has the option to choose different color schemes.
 Each of the three techniques will now be discussed in detail.
 
 ## Bubble Plot ##
@@ -91,3 +91,8 @@ The following conclusions can be made by looking at the Parallel co-ordinates pl
 1. Southern states appear to have a lower life expectancy, income and higher illetracy and murders compared to other regions
 2. Though there is some variance in Western states, they appear to have higher life expectancy and low illetracy when compared to other regions
 3. Northeast and west exhibit similar behavior but some state in the west outshine the others in Northeast
+
+The overall Shiny app looks something like this:
+
+![IMAGE](ParallelCoordinatesPlot.png)
+

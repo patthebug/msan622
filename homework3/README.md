@@ -94,5 +94,5 @@ The following conclusions can be made by looking at the Parallel co-ordinates pl
 
 The overall Shiny app looks something like this:
 
-![IMAGE](ParallelCoordinatesPlot.png)
+![IMAGE](ShinyApp_HW3.png)
 

@@ -33,13 +33,10 @@ source_url("https://github.com/patthebug/msan622/tree/master/homework3")
 
 ## Discussion ##
 
-The following Shiny app shows the technique 'filtering' applied to the 'State' dataset via 3 different plots:
+This Shiny app shows the technique 'filtering' applied to the 'State' dataset via 3 different plots:
 1. Bubble Plot
 2. Scatter Plot Matrix
 3. Parallel Co-ordinates Plot
-
-These plots are displayed in three different tabs which form a tabsetPanel. The filtering is consistent across all the plots, eg., if various regions are selected, they are reflected across all the 3 plots. There is also a functionality to change the alpha value to darken or lighten the dots or lines on the plots. User also has the option to choose different color schemes.
-Each of the three techniques will now be discussed in detail.
 
 ## Bubble Plot ##
 This technique was chosen because it does a good job of explaining the variables that I have chosen to visualize. I have chosen population, income, area of the state and region (South, West etc) to visualize in the bubble plot. Different colors on the plot represent the regions whereas the area of the dots (circles) represent the area of the state. The aforementioned variables were chosen to see the relationships between area of the state, region and income of the state wrt population of the state. The variable 'Region' has been used to determine the color of the dots present on the plot. 
@@ -85,6 +82,8 @@ The columns chosen to be visualized in this technique are - Illetracy, Life expe
 2. Placed the legend at the bottom of the plot to save some space
 3. Modified the Y axis to display the minimum and maximum value for each variable in question
 
+Furthermore, I have not used ggpairs to plot the scatter plot matrix as ggpairs is too slow. Using facets in ggplot helps us achieve the same functionality as ggpairs. 
+
 ![IMAGE](ParallelCoordinatesPlot.png)
 
 The following conclusions can be made by looking at the Parallel co-ordinates plot:
@@ -96,3 +95,6 @@ The overall Shiny app looks something like this:
 
 ![IMAGE](ShinyApp_HW3.png)
 
+## Interactivity ##
+
+The plots are displayed in three different tabs which form a tabsetPanel. The filtering is consistent across all the plots, eg., if various regions are selected, they are reflected across all the 3 plots. There is also a functionality to change the alpha value to darken or lighten the dots or lines on the plots. User also has the option to choose different color schemes. The color of the dots remain consistent upon region selection in any plot (E.g. If the region 'South' is red in Bubble plot, it will still be red when the selection is changed to include more regions on the plot)

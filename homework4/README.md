@@ -29,8 +29,8 @@ The next visualization is a word cloud. Though word clouds are not very useful f
 
 The next visualization is a word tree. A word tree shows what other words, a specific word is related to. The size of the connecting word is encoded in the size of the word. The lie factor in this case is low as well but the data ink ratio is high as compared to a bar plot as many words are being displayed, not all of them are as important. This visualization works primarily because the user has the capability to interact with the visualization and move the words back and forth to uncover the relationship amongst various words. The following is a static image of a word tree from the dataset in question.
 
-![IMAGE](WordTree.png)
+![IMAGE](WordTree.PNG)
 
 The next visualization is call Phrase Net. This visualization is useful when the user has some intuition about some word separating two words. This visualization displays all the words separated by the given word. The following visualization shows all the words separated by the word 'and'. This visualization also encodes the frequency of occurrence in the size of the word and is therefore low in lie factor but high on data ink ratio as it displays all related words in this case. All these words may not be necessary.
 
-![IMAGE](PhraseNet.jpg)
+![IMAGE](PhraseNet.JPG)

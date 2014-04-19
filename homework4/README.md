@@ -31,6 +31,6 @@ The next visualization is a word tree. A word tree shows what other words, a spe
 
 ![IMAGE](WordTree.PNG)
 
-The next visualization is call Phrase Net. This visualization is useful when the user has some intuition about some word separating two words. This visualization displays all the words separated by the given word. The following visualization shows all the words separated by the word 'and'. This visualization also encodes the frequency of occurrence in the size of the word and is therefore low in lie factor but high on data ink ratio as it displays all related words in this case. All these words may not be necessary.
+The next visualization is call Phrase Net. This visualization is useful when the user has some intuition about some word separating two words. This visualization displays all the words separated by the given word. The following visualization shows all the words separated by the word 'and'. This visualization also encodes the frequency of occurrence in the size of the word and is therefore low in lie factor but high on data ink ratio as it displays all related words in this case. All these words may not be necessary. 
 
 ![IMAGE](PhraseNet.JPG)

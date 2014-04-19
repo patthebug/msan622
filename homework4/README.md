@@ -1,4 +1,4 @@
-Homework [#]: [HOMEWORK NAME]
+Homework 4: Text Visualization
 ==============================
 
 | **Name**  | Prateek Singhal  |

@@ -52,5 +52,6 @@ These plots make for a pretty picture but really are not contributing much more 
 ![IMAGE](CoordPlot.png)
 
 Till now we have only looked at deaths, lets look at petrol prices now. The following circular heat map displays petrol prices month by month for the given time frame. This plot does not work very well as far as area of each block is concerned as the area for blocks are not equal. A rectangular heat map would have been better to display this data. This introduces a lie factor to the plot where the user believes that the area of blocks mean something when they actually don't. The data-ink ratio is high. 
+The plot shows an obvious pattern that the petrol prices went up by time except in 1978. The overall trend is increasing.
 
 ![IMAGE](CircularHeatMap.png)

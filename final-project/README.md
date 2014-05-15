@@ -19,6 +19,10 @@ The following packages must be installed prior to running this code:
 - `data.table`
 - `RColorBrewer`
 - `grid`
+- `httr`
+- `XML`
+
+Prior to running the app, please download the data available on the github repository. This app assumes that the data is available in the working directory.
 
 ## Introduction ##
 
@@ -30,6 +34,8 @@ The four visualizations are:
 3. Parallel co-ordinates plot
 4. Heat map
 5. Stacked bar plot
+
+In the data for both, white and red wine, there is only one categorical variable available called 'Wine Quality Type' which determines the quality of the wine in question with 3 being the worst and 8 being the best. Rest of the variables are all numeric variables and determine the chemical content of the wine for that sample. 
 
 ## Bubble Plot ##
 During the development of this visualization, I wanted to present flexibility to the user which is why this plot provides some level of freedom to the user to select the variables for the X, Y axes and also for the size of the bubble. 

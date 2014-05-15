@@ -54,7 +54,7 @@ The values on the X axis are slightly hard to see. I could have made the height 
 
 The axes labels are cut abruptly on the right hand side of the plot. Increasing the height of the plot would have solved this problem as well but because these labels are displayed clearly on top of the plot, it's not much of a problem as the viewer can easily relate to the names of these variables (by referring to the labels on top). 
 
-![IMAGE](ScatterPlotMatrix.png)
+![IMAGE](ScatterPlotMatrix.PNG)
 
 ## Parallel co-ordinates plot ##
 
@@ -66,7 +66,7 @@ One can also make use of the filtering that I have implemented (explained in the
 
 The lie factor for this plot is minimal as there is no jitter, the data is being displayed as is. The data-ink ratio is optimal as well because nothing unwanted is being displayed on the plot. Data density on the other hand is slightly high because of the number of data points displayed but one can filter on the wine quality type which will reduce the data density to an extent. 
 
-![IMAGE](ParallelPlot.png)
+![IMAGE](ParallelPlot.PNG)
 
 ## Heat Map ##
 
@@ -78,7 +78,7 @@ The color scheme used for this visualization is diverging as it presents a nice 
 
 This visualization preserves a good data-ink ratio as nothing unwanted is being displayed. Data density and lie factor for this plot can be argued about slightly. This plot does not do a very good job at giving the user an idea about how many cases are being displayed which introduces some lie factor. For example - a wine quality type with a very narrow range may be displaying many cases at the same time without the viewer even realising the number of cases being displayed. 
 
-![IMAGE](HeatMap.png)
+![IMAGE](HeatMap.PNG)
 
 ## Interactivity ##
 

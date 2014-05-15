@@ -90,7 +90,7 @@ The user again has the flexibility to look at individual wine types (white and r
 
 The range for X axis has been made the same both the plots when the viewer wants to see 'both' the wine types together for a fair comparison. Not having the same range on the X axis would have introduced some lie factor during comparison. As of now, the lie factor for this visualization is pretty low and the data ink ratio is optimal as nothing unwanted is being displayed on the plot. 
 
-One can notice from the plot that there are not a lot of cases belonging to wine quality type 3 and 8, where as wine quality type 5 and 6 dominate as far as number of cases goes. The user can make use of the interactivity here and choose only the wine quality types that they want to visualize. Clicking on check boxes displays only the selected wine quality types. By default, all wine quality types are displayed when none of the check boxes is selected. 
+One can notice from the plot that there are not a lot of cases belonging to wine quality type 3 and 8, where as wine quality type 5 and 6 dominate as far as number of cases goes. The user can make use of the interactivity here and choose only the wine quality types that they want to visualize. Clicking on check boxes displays only the selected wine quality types. By default, all wine quality types are displayed when none of the check boxes is selected. This visualization is also good at displaying the distribution of cases across quality types and also identifying outliers.
 
 ![IMAGE](StackedBarPlot.PNG)
 

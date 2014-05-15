@@ -22,12 +22,14 @@ The following packages must be installed prior to running this code:
 
 ## Introduction ##
 
-Using 4 different types of visualizations, I am trying to distinguish between white and red wine with respect to their chemical contents and trying to understand what makes them different. The description about the wine can be found [here](http://en.wikipedia.org/wiki/Vinho_Verde).
+Using 5 different types of visualizations, I am trying to distinguish between white and red wine with respect to their chemical contents and trying to understand what makes them different. The description about the wine can be found [here](http://en.wikipedia.org/wiki/Vinho_Verde).
 The four visualizations are:
+
 1. Bubble plot
 2. Scatter plot matrix
 3. Parallel co-ordinates plot
 4. Heat map
+5. Stacked bar plot
 
 ## Bubble Plot ##
 During the development of this visualization, I wanted to present flexibility to the user which is why this plot provides some level of freedom to the user to select the variables for the X, Y axes and also for the size of the bubble. 
@@ -80,13 +82,25 @@ This visualization preserves a good data-ink ratio as nothing unwanted is being 
 
 ![IMAGE](HeatMap.PNG)
 
+## Stacked Bar Plot ##
+
+Heat map did not do a good job in giving an intuition about the number of cases present in each wine quality type, which is why I created a stacked bar plot which gives an idea about the number of cases in each wine quality type. It is still difficult to see the exact number of cases but the viewer can now get an approximate idea regarding the number of cases. 
+
+The user again has the flexibility to look at individual wine types (white and red) or look at them together in which case the plots are displayed at the same time, next to each other. The legend for the plot has been placed on top of the plot so that it doesn't obstruct the actual visualization. 
+
+The range for X axis has been made the same both the plots when he viewer wants to see 'both' the wine types together for a fair comparison. Not having the same range on the X axis would have introduced some lie factor during comparison. As of now, the lie factor for this visualization is pretty low and the data ink ratio is optimal as nothing unwanted is being displayed on the plot. 
+
+One can notice from the plot that there are not a lot of cases belonging to wine quality type 3 and 8, where as wine quality type 5 and 6 dominate as far as number of cases goes. The user can make use of the interactivity here and choose only the wine quality types that they want to visualize. Clicking on check boxes displays only the selected wine quality types. By default, all wine quality types are displayed when none of the check boxes is selected. 
+
+![IMAGE](StackedBarPlot.PNG)
+
 ## Interactivity ##
 
 The dataset contains values for two different wine types - white and red. I have included a drop down which may be used to visualize white wine v/s red wine at any point for any of the visualizations. There is also an option to visualize both wine types at the same time and it works only for the bubble plot. When this option is selected, bubble plots for both, white and red wine are shown next to each other where comparisons can be done and inferences can be made. I have not implemented this functionality for the rest of the plots as the visualizations become too cluttered and hard to look at when viewed together. 
 
 There is flexibility for the user to select variables that they want to visualize on the X and Y axes. These drop down work for the bubble plot. The drop down for X axis variable also works for the 'Heat Map'. 'Scatter plot matrix' and 'Parallel co-ordinates plot' are showing all the variables at the same time which is why they don't need this functionality. The user also has the flexibility to choose the variable for for bubble size and this works only for the bubble plot. 
 
-I have also included check boxes for various wine quality types which the user may want to visualize separately for purposes of comparison. This functionality works very well across bubble plot, scatter plot matrix and parallel co-ordinates plot. Parallel co-ordinates plot wants at least two wine quality types to be selected as it does not work with only one group by default. When none of the check boxes is selected, all wine quality types are displayed by default. This technique has not been applied to the heat map because all wine quality types are already shown on a single plots in different rows, so each type is completely separate already. Filtering may be useful when the viewer feels that there are too many data points to look at or when they want to compare specific types at the same time (say 4 and 7).
+I have also included check boxes for various wine quality types which the user may want to visualize separately for purposes of comparison. This functionality works very well across bubble plot, scatter plot matrix, parallel co-ordinates plot and stacked bar plot. Parallel co-ordinates plot wants at least two wine quality types to be selected as it does not work with only one group by default. When none of the check boxes is selected, all wine quality types are displayed by default. This technique has not been applied to the heat map because all wine quality types are already shown on a single plots in different rows, so each type is completely separate already. Filtering may be useful when the viewer feels that there are too many data points to look at or when they want to compare specific types at the same time (say 4 and 7).
 
 I am trying to display about 5000 cases for white wine and close to 1800 cases for red wine. This can lead to dense plots which is why the use of 'alpha' is inevitable. I wanted to provide enough flexibility to the user to be able to change alpha as per their comfort. Some people may like higher values of alpha while other may not. This is the primary reason I still have this functionality in my visualization despite criticism and people suggesting me to take this functionality out during prototype presentations. For example - if a user wants to compare only two wine quality types on the bubble plot, they may use higher values of alpha whereas if they want to visualize many types at the same type, lower alpha value may be preferred. 
 
@@ -94,7 +108,9 @@ I am trying to display about 5000 cases for white wine and close to 1800 cases f
 
 In the prototype exercise, I had started by displaying only a single plot which was the bubble plot. I still had some interactivity in place based on which I received some valuable feedback. The plot that I had displayed was certainly 'vanilla' and did not look the best at the time. 
 
-One of the best feedback points that I received was to put my data on a logarithmic scale in order to avoid cluttering of the data which is much harder to visualize. When I showed the bubble plot for both, white and red wines at the same time, the Y axis did not match for both plots. I made the change and now the axes align properly. 
+One of the best feedback points that I received was to put my data on a logarithmic scale in order to avoid cluttering of the data which is much harder to visualize. When I showed the bubble plot for both, white and red wines at the same time, the Y axis was not the same for both plots. I made the change and now the axes align properly. 
+
+Another feedback that I received was to remove the drop down list for enabling the user to choose their own color scheme. I figured that it wasn't adding a lot of value to the visualizations and thus I took it out. 
 
 I was also asked during the exercise to remove the slider for changing the alpha value which I did not completely agree with. I wanted this slider to be there because different viewers have different preferences. Some user may prefer higher alpha values over lower values and vice versa. This is why I still have the alpha slider in place. 
 
@@ -107,3 +123,5 @@ Another challenge that I had faced was the rendering time of scatter plot matrix
 Given more time, I would re-implement everything in D3. I have wanted to learn D3 for a while but switching to something completely new would have been a risky bet, so I just ended up playing safe. 
 
 I would also implement some clustering and predictive algorithms if I had more time. It would have been interesting to look at data points which really belong to the same clusters versus the points which overlap. 
+
+I wanted to not have the scroll bar on the shiny app at all for better user convenience. Looking at the outlook of the app at this time, if I could align the check boxes properly (6 check boxes in 3 rows), it would have saved some space therefore getting rid of the scroll bar. I could not find an easy way of placing the check boxes next to each other, I tried going the HTML way but that took too much time and did not work out eventually. Another option was to get rid of the title for the whole page so I took that option and now the title is being displayed as the 'Window Title', there is still a very small scroll required but it's almost negligible. 
